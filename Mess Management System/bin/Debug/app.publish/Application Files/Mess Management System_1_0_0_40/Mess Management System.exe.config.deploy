@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<configuration>
+    <configSections>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="Mess_Management_System.My.MySettings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <connectionStrings/>
+    <startup>
+        
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup>
+	<runtime>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly>
+				<assemblyIdentity name="MySql.Data" publicKeyToken="C5687FC88969C44D" culture="neutral"/>
+				<bindingRedirect oldVersion="0.0.0.0-6.7.4.0" newVersion="6.7.4.0"/>
+			</dependentAssembly>
+		</assemblyBinding>
+	</runtime>
+ <userSettings>
+  <Mess_Management_System.My.MySettings>
+   <setting name="messName" serializeAs="String">
+    <value>Vishwakarma Bhaghirath MESS</value>
+   </setting>
+   <setting name="by_scanner_only" serializeAs="String">
+    <value>True</value>
+   </setting>
+   <setting name="Photos_Location" serializeAs="String">
+    <value>D:\Photos\</value>
+   </setting>
+   <setting name="Cash_On" serializeAs="String">
+    <value>False</value>
+   </setting>
+   <setting name="Max_Days_Delete_Entries" serializeAs="String">
+    <value>3</value>
+   </setting>
+   <setting name="Rebate_Min_days" serializeAs="String">
+    <value>3</value>
+   </setting>
+   <setting name="Extras_Location" serializeAs="String">
+    <value>MESS</value>
+   </setting>
+   <setting name="Cash_ID" serializeAs="String">
+    <value>FSSMSCASH</value>
+   </setting>
+   <setting name="Query_ON" serializeAs="String">
+    <value>False</value>
+   </setting>
+   <setting name="DB_NAME" serializeAs="String">
+    <value>MESS_2</value>
+   </setting>
+   <setting name="DB_UserName" serializeAs="String">
+    <value>root</value>
+   </setting>
+   <setting name="DB_Password" serializeAs="String">
+    <value>root</value>
+   </setting>
+   <setting name="CurrentSession_DBName" serializeAs="String">
+    <value />
+   </setting>
+   <setting name="CurrentSession_DBUsername" serializeAs="String">
+    <value />
+   </setting>
+   <setting name="CurrentSession_Password" serializeAs="String">
+    <value />
+   </setting>
+   <setting name="MonthlyCapON" serializeAs="String">
+    <value>True</value>
+   </setting>
+   <setting name="grubSigningsON" serializeAs="String">
+    <value>True</value>
+   </setting>
+   <setting name="grubSigningsDelimiter" serializeAs="String">
+    <value>;</value>
+   </setting>
+  </Mess_Management_System.My.MySettings>
+ </userSettings>
+</configuration>

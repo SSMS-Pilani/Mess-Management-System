@@ -1,0 +1,60 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="messName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Vishwakarma Bhaghirath MESS</Value>
+    </Setting>
+    <Setting Name="by_scanner_only" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Photos_Location" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\Photos\</Value>
+    </Setting>
+    <Setting Name="Cash_On" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Max_Days_Delete_Entries" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="Rebate_Min_days" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="Extras_Location" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MESS</Value>
+    </Setting>
+    <Setting Name="Cash_ID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">FSSMSCASH</Value>
+    </Setting>
+    <Setting Name="Query_ON" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DB_NAME" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MESS_2</Value>
+    </Setting>
+    <Setting Name="DB_UserName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">root</Value>
+    </Setting>
+    <Setting Name="DB_Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">root</Value>
+    </Setting>
+    <Setting Name="CurrentSession_DBName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CurrentSession_DBUsername" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CurrentSession_Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MonthlyCapON" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="grubSigningsON" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="grubSigningsDelimiter" Type="System.String" Scope="User">
+      <Value Profile="(Default)">;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

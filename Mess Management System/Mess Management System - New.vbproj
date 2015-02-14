@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8151FD18-EAC9-4B65-8373-8EB2C6A51740}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Mess_Management_System.My.MyApplication</StartupObject>
+    <RootNamespace>Mess_Management_System</RootNamespace>
+    <AssemblyName>Mess Management System</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\bansod_deven\Desktop\MMS- 30-01-2015\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>41</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Mess Management System.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Mess Management System.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>03FD5EB181D40B03B515A5E272A3AA8A46D190F9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Mess Management System_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bitslogo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="dbConnection.vb" />
+    <Compile Include="formAddSupplier.Designer.vb">
+      <DependentUpon>formAddSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formAddSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formEditSettings.Designer.vb">
+      <DependentUpon>formEditSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formEditSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formGrubSignings.Designer.vb">
+      <DependentUpon>formGrubSignings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formGrubSignings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formItemSale.Designer.vb">
+      <DependentUpon>formItemSale.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formItemSale.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLedger.Designer.vb">
+      <DependentUpon>formLedger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formLedger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMonthly.Designer.vb">
+      <DependentUpon>formMonthly.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formMonthly.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMonthlyBill-new.Designer.vb">
+      <DependentUpon>formMonthlyBill-new.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formMonthlyBill-new.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formBlock.Designer.vb">
+      <DependentUpon>formBlock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formBlock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formChangePrice.Designer.vb">
+      <DependentUpon>formChangePrice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formChangePrice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formControlP.Designer.vb">
+      <DependentUpon>formControlP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formControlP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDeletedExtras.Designer.vb">
+      <DependentUpon>formDeletedExtras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formDeletedExtras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDeletedSupplies.Designer.vb">
+      <DependentUpon>formDeletedSupplies.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formDeletedSupplies.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDeleteStudentTakes.Designer.vb">
+      <DependentUpon>formDeleteStudentTakes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formDeleteStudentTakes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formExtras.Designer.vb">
+      <DependentUpon>formExtras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formExtras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formIndentEntry.Designer.vb">
+      <DependentUpon>formIndentEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formIndentEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formItemDelete.Designer.vb">
+      <DependentUpon>formItemDelete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formItemDelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formAddItem.Designer.vb">
+      <DependentUpon>formAddItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formAddItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDeleteMessTakes.Designer.vb">
+      <DependentUpon>formDeleteMessTakes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formDeleteMessTakes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLogin.Designer.vb">
+      <DependentUpon>formLogin.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMonthlyCap.Designer.vb">
+      <DependentUpon>formMonthlyCap.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formMonthlyCap.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRebate.Designer.vb">
+      <DependentUpon>formRebate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formRebate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formViewInventory.Designer.vb">
+      <DependentUpon>formViewInventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formViewInventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formViewMonthlyItems.Designer.vb">
+      <DependentUpon>formViewMonthlyItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formViewMonthlyItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formViewStudents.Designer.vb">
+      <DependentUpon>formViewStudents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formViewStudents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleSettings.vb" />
+    <Compile Include="myFunctions.vb" />
+    <Compile Include="formStudentAccount.Designer.vb">
+      <DependentUpon>formStudentAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formStudentAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="formAddSupplier.resx">
+      <DependentUpon>formAddSupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formEditSettings.resx">
+      <DependentUpon>formEditSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formGrubSignings.resx">
+      <DependentUpon>formGrubSignings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formItemSale.resx">
+      <DependentUpon>formItemSale.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLedger.resx">
+      <DependentUpon>formLedger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMonthly.resx">
+      <DependentUpon>formMonthly.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMonthlyBill-new.resx">
+      <DependentUpon>formMonthlyBill-new.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formBlock.resx">
+      <DependentUpon>formBlock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formChangePrice.resx">
+      <DependentUpon>formChangePrice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formControlP.resx">
+      <DependentUpon>formControlP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDeletedExtras.resx">
+      <DependentUpon>formDeletedExtras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDeletedSupplies.resx">
+      <DependentUpon>formDeletedSupplies.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDeleteStudentTakes.resx">
+      <DependentUpon>formDeleteStudentTakes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formExtras.resx">
+      <DependentUpon>formExtras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formIndentEntry.resx">
+      <DependentUpon>formIndentEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formItemDelete.resx">
+      <DependentUpon>formItemDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formAddItem.resx">
+      <DependentUpon>formAddItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDeleteMessTakes.resx">
+      <DependentUpon>formDeleteMessTakes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLogin.resx">
+      <DependentUpon>formLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMonthlyCap.resx">
+      <DependentUpon>formMonthlyCap.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRebate.resx">
+      <DependentUpon>formRebate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formStudentAccount.resx">
+      <DependentUpon>formStudentAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formViewInventory.resx">
+      <DependentUpon>formViewInventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formViewMonthlyItems.resx">
+      <DependentUpon>formViewMonthlyItems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formViewStudents.resx">
+      <DependentUpon>formViewStudents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mess Management System_TemporaryKey.pfx" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bitslogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bitslogo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
