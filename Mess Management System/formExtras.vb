@@ -1139,7 +1139,7 @@ Public Class formExtras
                 e.Graphics.DrawString("Bill Grand Total : " + sum1.ToString, tableFont, Brushes.Black, 140, 135 + 15 * no)
                 Dim query2 As String = "select sum(QTY*(RATE)) from student_takes where date_format(Date(DOR),'%d-%m-%Y') like '%" + MonthCalendar1.SelectionRange.Start.Month.ToString + "-" + MonthCalendar1.SelectionRange.Start.Year.ToString + "'" + " and s_id = '" + sid2 + "'"
                 Dim comm2 As New MySqlCommand(query2, conn.conn)
-                Dim tot2 As Integer = comm.ExecuteScalar
+                Dim tot2 As Integer = comm2.ExecuteScalar
                 e.Graphics.DrawString("TOTAL  " + My.Settings.Extras_Location + "  EXTRAS FOR THIS MONTH : " + tot2.ToString, tableFont, Brushes.Black, 0, 150 + +15 * no)
                 e.Graphics.DrawString("VALID THROUGH THE MEAL", tableFont, Brushes.Black, 70, 165 + 15 * no)
                 e.Graphics.DrawString("Thank You !! Have Fun !!", tableFont, Brushes.Black, 70, 180 + 15 * no)
