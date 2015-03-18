@@ -846,7 +846,8 @@ Public Class formExtras
     End Sub
 
     'Prints the Current Bill
-    Private Sub print_bill(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+    
+            Private Sub print_bill(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
         Dim dat As String
         Dim tot As Double
         Dim sid As String = S_ID.Text.ToString
@@ -871,7 +872,14 @@ Public Class formExtras
             e.Graphics.DrawString("Amount", tableFont, Brushes.Black, 320, 90)
 
             e.Graphics.DrawString("1", tableFont, Brushes.Black, 0, 115)
-            e.Graphics.DrawString(INAME1.Text, tableFont, Brushes.Black, 30, 115)
+            Dim item_name As String
+            If CStr(INAME1.text).Length > 10 Then
+                item_name = CStr(INAME1.text).Substring(0, 3) + "..." + CStr(INAME1.text).Substring(CStr(INAME1.text).Length - 6, 6)
+            Else
+                item_name = INAME1.text
+
+            End If
+            e.Graphics.DrawString(item_name.Text, tableFont, Brushes.Black, 30, 115)
             e.Graphics.DrawString(PRICE1.Text, tableFont, Brushes.Black, 190, 115)
             e.Graphics.DrawString(QTY1.Text, tableFont, Brushes.Black, 240, 115)
             e.Graphics.DrawString(TAX1.Text, tableFont, Brushes.Black, 270, 115)
@@ -888,87 +896,128 @@ Public Class formExtras
                 e.Graphics.DrawString("VALID THROUGH THE MEAL", tableFont, Brushes.Black, 70, 175)
                 e.Graphics.DrawString("Thank You !! Have Fun !!", tableFont, Brushes.Black, 70, 190)
             Else
+                If CStr(INAME2.text).Length > 10 Then
+                    item_name = CStr(INAME2.text).Substring(0, 3) + "..." + CStr(INAME2.text).Substring(CStr(INAME2.text).Length - 6, 6)
+                Else
+                    item_name = INAME2.text
+                End If
+
+
+
+
+
+
+
+
                 e.Graphics.DrawString("2", tableFont, Brushes.Black, 0, 130)
-                e.Graphics.DrawString(INAME2.Text, tableFont, Brushes.Black, 30, 130)
+                e.Graphics.DrawString(item_name, tableFont, Brushes.Black, 30, 130)
                 e.Graphics.DrawString(PRICE2.Text, tableFont, Brushes.Black, 190, 130)
                 e.Graphics.DrawString(QTY2.Text, tableFont, Brushes.Black, 240, 130)
                 e.Graphics.DrawString(TAX1.Text, tableFont, Brushes.Black, 270, 130)
                 e.Graphics.DrawString(Convert.ToString(CDbl(PRICE2.Text) * (1 + (TAX2.Text) / 100) * CDbl(QTY2.Text)), tableFont, Brushes.Black, 320, 130)
 
 
+            End If
 
 
-                If (ICODE3.Text = "") Then
-                    e.Graphics.DrawString("--------------------------------------------", tableFont, Brushes.Black, -20, 145)
-                    conn.connect()
-                    e.Graphics.DrawString("Bill Grand Total : " + Sub_total.Text, tableFont, Brushes.Black, 140, 160)
-                    Dim query As String = "select sum(QTY*(RATE*(1+(TAX/100)))) from student_takes where date_format(Date(DOR),'%d-%m-%Y') like '%" + MonthCalendar1.SelectionRange.Start.Month.ToString + "-" + MonthCalendar1.SelectionRange.Start.Year.ToString + "'" + "and s_id='" + sid + "'"
-                    Dim comm As New MySqlCommand(query, conn.conn)
-                    tot = comm.ExecuteScalar
-                    e.Graphics.DrawString("TOTAL  " + My.Settings.Extras_Location + "  EXTRAS FOR THIS MONTH : " + tot.ToString, tableFont, Brushes.Black, 0, 175)
-                    e.Graphics.DrawString("VALID THROUGH THE MEAL", tableFont, Brushes.Black, 70, 190)
-                    e.Graphics.DrawString("Thank You !! Have Fun !!", tableFont, Brushes.Black, 70, 205)
+
+
+
+
+            If (ICODE3.Text = "") Then
+                e.Graphics.DrawString("--------------------------------------------", tableFont, Brushes.Black, -20, 145)
+                conn.connect()
+                e.Graphics.DrawString("Bill Grand Total : " + Sub_total.Text, tableFont, Brushes.Black, 140, 160)
+                Dim query As String = "select sum(QTY*(RATE*(1+(TAX/100)))) from student_takes where date_format(Date(DOR),'%d-%m-%Y') like '%" + MonthCalendar1.SelectionRange.Start.Month.ToString + "-" + MonthCalendar1.SelectionRange.Start.Year.ToString + "'" + "and s_id='" + sid + "'"
+                Dim comm As New MySqlCommand(query, conn.conn)
+                tot = comm.ExecuteScalar
+                e.Graphics.DrawString("TOTAL  " + My.Settings.Extras_Location + "  EXTRAS FOR THIS MONTH : " + tot.ToString, tableFont, Brushes.Black, 0, 175)
+                e.Graphics.DrawString("VALID THROUGH THE MEAL", tableFont, Brushes.Black, 70, 190)
+                e.Graphics.DrawString("Thank You !! Have Fun !!", tableFont, Brushes.Black, 70, 205)
+            Else
+
+                If CStr(INAME3.text).Length > 10 Then
+                    item_name = CStr(INAME3.text).Substring(0, 3) + "..." + CStr(INAME3.text).Substring(CStr(INAME3.text).Length - 6, 6)
                 Else
-                    e.Graphics.DrawString("3", tableFont, Brushes.Black, 0, 145)
-                    e.Graphics.DrawString(INAME3.Text, tableFont, Brushes.Black, 30, 145)
-                    e.Graphics.DrawString(PRICE3.Text, tableFont, Brushes.Black, 190, 145)
-                    e.Graphics.DrawString(QTY3.Text, tableFont, Brushes.Black, 240, 145)
-                    e.Graphics.DrawString(TAX1.Text, tableFont, Brushes.Black, 270, 145)
-                    e.Graphics.DrawString(Convert.ToString(CDbl(PRICE3.Text) * (1 + (TAX3.Text) / 100) * CDbl(QTY3.Text)), tableFont, Brushes.Black, 320, 145)
-
-                    If (ICODE4.Text = "") Then
-                        e.Graphics.DrawString("--------------------------------------------", tableFont, Brushes.Black, -20, 160)
-                        conn.connect()
-                        e.Graphics.DrawString("Bill Grand Total : " + Sub_total.Text, tableFont, Brushes.Black, 140, 175)
-                        Dim query As String = "select sum(QTY*(RATE*(1+(TAX/100)))) from student_takes where date_format(Date(DOR),'%d-%m-%Y') like '%" + MonthCalendar1.SelectionRange.Start.Month.ToString + "-" + MonthCalendar1.SelectionRange.Start.Year.ToString + "'" + "and s_id='" + sid + "'"
-                        Dim comm As New MySqlCommand(query, conn.conn)
-                        tot = comm.ExecuteScalar
-                        e.Graphics.DrawString("TOTAL  " + My.Settings.Extras_Location + "  EXTRAS FOR THIS MONTH : " + tot.ToString, tableFont, Brushes.Black, 0, 190)
-                        e.Graphics.DrawString("VALID THROUGH THE MEAL", tableFont, Brushes.Black, 70, 205)
-                        e.Graphics.DrawString("Thank You !! Have Fun !!", tableFont, Brushes.Black, 70, 220)
-                    Else
-                        e.Graphics.DrawString("4", tableFont, Brushes.Black, 0, 160)
-                        e.Graphics.DrawString(INAME4.Text, tableFont, Brushes.Black, 30, 160)
-                        e.Graphics.DrawString(PRICE4.Text, tableFont, Brushes.Black, 190, 160)
-                        e.Graphics.DrawString(QTY4.Text, tableFont, Brushes.Black, 240, 160)
-                        e.Graphics.DrawString(TAX1.Text, tableFont, Brushes.Black, 270, 160)
-                        e.Graphics.DrawString(Convert.ToString(CDbl(PRICE4.Text) * (1 + (TAX4.Text) / 100) * CDbl(QTY4.Text)), tableFont, Brushes.Black, 320, 160)
+                    item_name = INAME3.text
+                End If
 
 
-                        If (ICODE5.Text = "") Then
-                            e.Graphics.DrawString("--------------------------------------------", tableFont, Brushes.Black, -20, 175)
-                            conn.connect()
-                            Dim query As String = "select sum(QTY*(RATE*(1+(TAX/100)))) from student_takes where date_format(Date(DOR),'%d-%m-%Y') like '%" + MonthCalendar1.SelectionRange.Start.Month.ToString + "-" + MonthCalendar1.SelectionRange.Start.Year.ToString + "'" + "and s_id='" + sid + "'"
-                            Dim comm As New MySqlCommand(query, conn.conn)
-                            tot = comm.ExecuteScalar
-                            e.Graphics.DrawString("Bill Grand Total : " + Sub_total.Text, tableFont, Brushes.Black, 140, 190)
-                            e.Graphics.DrawString("TOTAL  " + My.Settings.Extras_Location + "  EXTRAS FOR THIS MONTH : " + tot.ToString, tableFont, Brushes.Black, 0, 205)
-                            e.Graphics.DrawString("VALID THROUGH THE MEAL", tableFont, Brushes.Black, 70, 220)
-                            e.Graphics.DrawString("Thank You !! Have Fun !!", tableFont, Brushes.Black, 70, 235)
-                        Else
-                            e.Graphics.DrawString("5", tableFont, Brushes.Black, 0, 175)
-                            e.Graphics.DrawString(INAME5.Text, tableFont, Brushes.Black, 30, 175)
-                            e.Graphics.DrawString(PRICE5.Text, tableFont, Brushes.Black, 190, 175)
-                            e.Graphics.DrawString(QTY5.Text, tableFont, Brushes.Black, 240, 175)
-                            e.Graphics.DrawString(TAX1.Text, tableFont, Brushes.Black, 270, 175)
-                            e.Graphics.DrawString(Convert.ToString(CDbl(PRICE5.Text) * (1 + (TAX5.Text) / 100) * CDbl(QTY5.Text)), tableFont, Brushes.Black, 320, 175)
 
-                            e.Graphics.DrawString("--------------------------------------------", tableFont, Brushes.Black, -20, 190)
-                            conn.connect()
+                e.Graphics.DrawString("3", tableFont, Brushes.Black, 0, 145)
+                e.Graphics.DrawString(item_name, tableFont, Brushes.Black, 30, 145)
+                e.Graphics.DrawString(PRICE3.Text, tableFont, Brushes.Black, 190, 145)
+                e.Graphics.DrawString(QTY3.Text, tableFont, Brushes.Black, 240, 145)
+                e.Graphics.DrawString(TAX1.Text, tableFont, Brushes.Black, 270, 145)
+                e.Graphics.DrawString(Convert.ToString(CDbl(PRICE3.Text) * (1 + (TAX3.Text) / 100) * CDbl(QTY3.Text)), tableFont, Brushes.Black, 320, 145)
+            End If
 
-                            e.Graphics.DrawString("Bill Grand Total : " + Sub_total.Text, tableFont, Brushes.Black, 140, 205)
-                            Dim query As String = "select sum(QTY*(RATE*(1+(TAX/100)))) from student_takes where date_format(Date(DOR),'%d-%m-%Y') like '%" + MonthCalendar1.SelectionRange.Start.Month.ToString + "-" + MonthCalendar1.SelectionRange.Start.Year.ToString + "'" + "and s_id='" + sid + "'"
-                            Dim comm As New MySqlCommand(query, conn.conn)
-                            tot = comm.ExecuteScalar
-                            e.Graphics.DrawString("TOTAL  " + My.Settings.Extras_Location + "  EXTRAS FOR THIS MONTH : " + tot.ToString, tableFont, Brushes.Black, 0, 220)
-                            e.Graphics.DrawString("VALID THROUGH THE MEAL", tableFont, Brushes.Black, 70, 235)
-                            e.Graphics.DrawString("Thank You !! Have Fun !!", tableFont, Brushes.Black, 70, 250)
-                        End If
 
-                    End If
+
+            If (ICODE4.Text = "") Then
+                e.Graphics.DrawString("--------------------------------------------", tableFont, Brushes.Black, -20, 160)
+                conn.connect()
+                e.Graphics.DrawString("Bill Grand Total : " + Sub_total.Text, tableFont, Brushes.Black, 140, 175)
+                Dim query As String = "select sum(QTY*(RATE*(1+(TAX/100)))) from student_takes where date_format(Date(DOR),'%d-%m-%Y') like '%" + MonthCalendar1.SelectionRange.Start.Month.ToString + "-" + MonthCalendar1.SelectionRange.Start.Year.ToString + "'" + "and s_id='" + sid + "'"
+                Dim comm As New MySqlCommand(query, conn.conn)
+                tot = comm.ExecuteScalar
+                e.Graphics.DrawString("TOTAL  " + My.Settings.Extras_Location + "  EXTRAS FOR THIS MONTH : " + tot.ToString, tableFont, Brushes.Black, 0, 190)
+                e.Graphics.DrawString("VALID THROUGH THE MEAL", tableFont, Brushes.Black, 70, 205)
+                e.Graphics.DrawString("Thank You !! Have Fun !!", tableFont, Brushes.Black, 70, 220)
+            Else
+                If CStr(INAME4.text).Length > 10 Then
+                    item_name = CStr(INAME4.text).Substring(0, 3) + "..." + CStr(INAME4.text).Substring(CStr(INAME4.text).Length - 6, 6)
+                Else
+                    item_name = INAME4.text
 
                 End If
+                e.Graphics.DrawString("4", tableFont, Brushes.Black, 0, 160)
+                e.Graphics.DrawString(item_name, tableFont, Brushes.Black, 30, 160)
+                e.Graphics.DrawString(PRICE4.Text, tableFont, Brushes.Black, 190, 160)
+                e.Graphics.DrawString(QTY4.Text, tableFont, Brushes.Black, 240, 160)
+                e.Graphics.DrawString(TAX1.Text, tableFont, Brushes.Black, 270, 160)
+                e.Graphics.DrawString(Convert.ToString(CDbl(PRICE4.Text) * (1 + (TAX4.Text) / 100) * CDbl(QTY4.Text)), tableFont, Brushes.Black, 320, 160)
             End If
+
+
+            If (ICODE5.Text = "") Then
+                e.Graphics.DrawString("--------------------------------------------", tableFont, Brushes.Black, -20, 175)
+                conn.connect()
+                Dim query As String = "select sum(QTY*(RATE*(1+(TAX/100)))) from student_takes where date_format(Date(DOR),'%d-%m-%Y') like '%" + MonthCalendar1.SelectionRange.Start.Month.ToString + "-" + MonthCalendar1.SelectionRange.Start.Year.ToString + "'" + "and s_id='" + sid + "'"
+                Dim comm As New MySqlCommand(query, conn.conn)
+                tot = comm.ExecuteScalar
+                e.Graphics.DrawString("Bill Grand Total : " + Sub_total.Text, tableFont, Brushes.Black, 140, 190)
+                e.Graphics.DrawString("TOTAL  " + My.Settings.Extras_Location + "  EXTRAS FOR THIS MONTH : " + tot.ToString, tableFont, Brushes.Black, 0, 205)
+                e.Graphics.DrawString("VALID THROUGH THE MEAL", tableFont, Brushes.Black, 70, 220)
+                e.Graphics.DrawString("Thank You !! Have Fun !!", tableFont, Brushes.Black, 70, 235)
+            Else
+                If CStr(INAME5.text).Length > 10 Then
+                    item_name = CStr(INAME5.text).Substring(0, 3) + "..." + CStr(INAME5.txt).Substring(CStr(INAME5.text).Length - 6, 6)
+                Else
+                    item_name = INAME5.text
+                End If
+
+                e.Graphics.DrawString("5", tableFont, Brushes.Black, 0, 175)
+                e.Graphics.DrawString(item_name, tableFont, Brushes.Black, 30, 175)
+                e.Graphics.DrawString(PRICE5.Text, tableFont, Brushes.Black, 190, 175)
+                e.Graphics.DrawString(QTY5.Text, tableFont, Brushes.Black, 240, 175)
+                e.Graphics.DrawString(TAX1.Text, tableFont, Brushes.Black, 270, 175)
+                e.Graphics.DrawString(Convert.ToString(CDbl(PRICE5.Text) * (1 + (TAX5.Text) / 100) * CDbl(QTY5.Text)), tableFont, Brushes.Black, 320, 175)
+
+                e.Graphics.DrawString("--------------------------------------------", tableFont, Brushes.Black, -20, 190)
+                conn.connect()
+
+                e.Graphics.DrawString("Bill Grand Total : " + Sub_total.Text, tableFont, Brushes.Black, 140, 205)
+                Dim query As String = "select sum(QTY*(RATE*(1+(TAX/100)))) from student_takes where date_format(Date(DOR),'%d-%m-%Y') like '%" + MonthCalendar1.SelectionRange.Start.Month.ToString + "-" + MonthCalendar1.SelectionRange.Start.Year.ToString + "'" + "and s_id='" + sid + "'"
+                Dim comm As New MySqlCommand(query, conn.conn)
+                tot = comm.ExecuteScalar
+                e.Graphics.DrawString("TOTAL  " + My.Settings.Extras_Location + "  EXTRAS FOR THIS MONTH : " + tot.ToString, tableFont, Brushes.Black, 0, 220)
+                e.Graphics.DrawString("VALID THROUGH THE MEAL", tableFont, Brushes.Black, 70, 235)
+                e.Graphics.DrawString("Thank You !! Have Fun !!", tableFont, Brushes.Black, 70, 250)
+            End If
+
+
+
             Me.Focus()
             'Me.reload()
         Catch ex As Exception
