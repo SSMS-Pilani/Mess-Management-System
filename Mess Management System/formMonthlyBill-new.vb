@@ -46,7 +46,7 @@ Public Class formMonthlyBill
             con1.connect()
             Dim comm1 As New MySqlCommand("SELECT * FROM STUDENT ORDER BY BHAWAN,ROOM ", con1.conn)
 
-            filename = "D:" + "\" + My.Settings.messName.ToString + "_" + month + "_" + year + ".xlsx"
+            filename = "C:" + "\" + My.Settings.messName.ToString + "_" + month + "_" + year + ".xlsx"
             'Me.Text = filename
 
             oExcel = CreateObject("Excel.Application")
