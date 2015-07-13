@@ -43,6 +43,7 @@ Partial Class formControlP
         Me.Deleted_Supplies = New System.Windows.Forms.Button()
         Me.Deleted_Extras = New System.Windows.Forms.Button()
         Me.Item_Sale = New System.Windows.Forms.Button()
+        Me.backupButton = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -235,6 +236,7 @@ Partial Class formControlP
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.GroupBox3.Controls.Add(Me.backupButton)
         Me.GroupBox3.Controls.Add(Me.Grub_Signings)
         Me.GroupBox3.Controls.Add(Me.Monthly_Bill)
         Me.GroupBox3.Controls.Add(Me.Deleted_Supplies)
@@ -251,7 +253,7 @@ Partial Class formControlP
         '
         Me.Grub_Signings.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Grub_Signings.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.Grub_Signings.Location = New System.Drawing.Point(447, 84)
+        Me.Grub_Signings.Location = New System.Drawing.Point(337, 84)
         Me.Grub_Signings.Name = "Grub_Signings"
         Me.Grub_Signings.Size = New System.Drawing.Size(215, 49)
         Me.Grub_Signings.TabIndex = 21
@@ -262,7 +264,7 @@ Partial Class formControlP
         '
         Me.Monthly_Bill.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Monthly_Bill.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.Monthly_Bill.Location = New System.Drawing.Point(189, 85)
+        Me.Monthly_Bill.Location = New System.Drawing.Point(66, 84)
         Me.Monthly_Bill.Name = "Monthly_Bill"
         Me.Monthly_Bill.Size = New System.Drawing.Size(215, 49)
         Me.Monthly_Bill.TabIndex = 20
@@ -301,6 +303,17 @@ Partial Class formControlP
         Me.Item_Sale.TabIndex = 17
         Me.Item_Sale.Text = "View Item Sale"
         Me.Item_Sale.UseVisualStyleBackColor = True
+        '
+        'backupButton
+        '
+        Me.backupButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.backupButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.backupButton.Location = New System.Drawing.Point(590, 84)
+        Me.backupButton.Name = "backupButton"
+        Me.backupButton.Size = New System.Drawing.Size(215, 49)
+        Me.backupButton.TabIndex = 22
+        Me.backupButton.Text = "Backup"
+        Me.backupButton.UseVisualStyleBackColor = True
         '
         'formControlP
         '
@@ -342,4 +355,5 @@ Partial Class formControlP
     Friend WithEvents Rebate As System.Windows.Forms.Button
     Friend WithEvents Monthly_Cap As System.Windows.Forms.Button
     Friend WithEvents Grub_Signings As System.Windows.Forms.Button
+    Friend WithEvents backupButton As System.Windows.Forms.Button
 End Class

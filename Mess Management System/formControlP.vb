@@ -143,4 +143,8 @@
             MsgBox("Grub Signings have been disabled in Messes")
         End If
     End Sub
+
+    Private Sub backupButton_Click(sender As Object, e As EventArgs) Handles backupButton.Click
+        formBackupApplication.show()
+    End Sub
 End Class

@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Mess Management System.exe" size="429056">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Mess Management System.exe" size="444416">
       <assemblyIdentity name="Mess Management System" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>6Z/C8seNILv5MKFVYYdJfOzX17o=</dsig:DigestValue>
+        <dsig:DigestValue>TVm/0bK3DMmAhNkefhG5RSMraVI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -75,13 +75,13 @@
       <dsig:DigestValue>rzeaBv/JSxE9197wCwT4Baoc294=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Mess Management System.exe.config" size="2886">
+  <file name="Mess Management System.exe.config" size="3194">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>5OdZibwmB1Beg4Ks3SBcEzZbhb8=</dsig:DigestValue>
+      <dsig:DigestValue>bvqhBBazTleytAKiu+YO1WlwFqk=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

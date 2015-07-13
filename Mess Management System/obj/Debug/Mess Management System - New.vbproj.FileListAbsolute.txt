@@ -38,3 +38,44 @@ E:\From Sumit Bhaiya\Mess Management System\Mess Management System\obj\Debug\Mes
 E:\From Sumit Bhaiya\Mess Management System\Mess Management System\obj\Debug\Mess Management System.exe
 E:\From Sumit Bhaiya\Mess Management System\Mess Management System\obj\Debug\Mess Management System.xml
 E:\From Sumit Bhaiya\Mess Management System\Mess Management System\obj\Debug\Mess Management System.pdb
+D:\Mess Management System\Mess Management System\bin\Debug\Mess Management System.exe.config
+D:\Mess Management System\Mess Management System\obj\Debug\Mess Management System.exe
+D:\Mess Management System\Mess Management System\obj\Debug\Mess Management System.xml
+D:\Mess Management System\Mess Management System\obj\Debug\Mess Management System.pdb
+D:\Mess Management System\Mess Management System\obj\Debug\Mess Management System - New.vbprojResolveAssemblyReference.cache
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formAddSupplier.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formEditSettings.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formGrubSignings.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formItemSale.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formLedger.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formMonthly.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formMonthlyBill.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formBlock.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formChangePrice.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formControlP.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formDeletedExtras.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formDeletedSupplies.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formDeleteStudentTakes.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formExtras.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formIndentEntry.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formItemDelete.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formAddItem.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formDeleteMessTakes.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formLogin.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formMonthlyCap.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formRebate.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formStudentAccount.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formViewInventory.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formViewMonthlyItems.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formViewStudents.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.Resources.resources
+D:\Mess Management System\Mess Management System\obj\Debug\Mess Management System - New.vbproj.GenerateResource.Cache
+D:\Mess Management System\Mess Management System\bin\Debug\Mess Management System.exe.manifest
+D:\Mess Management System\Mess Management System\bin\Debug\Mess Management System.application
+D:\Mess Management System\Mess Management System\bin\Debug\Mess Management System.exe
+D:\Mess Management System\Mess Management System\bin\Debug\Mess Management System.pdb
+D:\Mess Management System\Mess Management System\bin\Debug\Mess Management System.xml
+D:\Mess Management System\Mess Management System\bin\Debug\MySql.Data.dll
+D:\Mess Management System\Mess Management System\obj\Debug\Mess Management System.exe.manifest
+D:\Mess Management System\Mess Management System\obj\Debug\Mess Management System.application
+D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formBackupApplication.resources

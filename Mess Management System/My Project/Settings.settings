@@ -56,5 +56,14 @@
     <Setting Name="grubSigningsDelimiter" Type="System.String" Scope="User">
       <Value Profile="(Default)">;</Value>
     </Setting>
+    <Setting Name="BackupLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\backup</Value>
+    </Setting>
+    <Setting Name="MessRepBackupLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\MessRepBackup</Value>
+    </Setting>
+    <Setting Name="mysqldumpLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -14,7 +14,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile />
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\bansod_deven\Desktop\MMS- 30-01-2015\</PublishUrl>
+    <PublishUrl>D:\Mess Softs\11-08-2014- With Cash ON\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -24,7 +24,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>41</ApplicationRevision>
+    <ApplicationRevision>15</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -107,12 +107,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="formBackupApplication.Designer.vb">
-      <DependentUpon>formBackupApplication.vb</DependentUpon>
-    </Compile>
-    <Compile Include="formBackupApplication.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="dbConnection.vb" />
     <Compile Include="formAddSupplier.Designer.vb">
       <DependentUpon>formAddSupplier.vb</DependentUpon>
@@ -120,28 +114,10 @@
     <Compile Include="formAddSupplier.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formEditSettings.Designer.vb">
-      <DependentUpon>formEditSettings.vb</DependentUpon>
+    <Compile Include="formGrub_Entry.Designer.vb">
+      <DependentUpon>formGrub_Entry.vb</DependentUpon>
     </Compile>
-    <Compile Include="formEditSettings.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formGrubSignings.Designer.vb">
-      <DependentUpon>formGrubSignings.vb</DependentUpon>
-    </Compile>
-    <Compile Include="formGrubSignings.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formItemSale.Designer.vb">
-      <DependentUpon>formItemSale.vb</DependentUpon>
-    </Compile>
-    <Compile Include="formItemSale.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formLedger.Designer.vb">
-      <DependentUpon>formLedger.vb</DependentUpon>
-    </Compile>
-    <Compile Include="formLedger.vb">
+    <Compile Include="formGrub_Entry.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formMonthly.Designer.vb">
@@ -150,10 +126,10 @@
     <Compile Include="formMonthly.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formMonthlyBill-new.Designer.vb">
-      <DependentUpon>formMonthlyBill-new.vb</DependentUpon>
+    <Compile Include="formMonthlyBill.Designer.vb">
+      <DependentUpon>formMonthlyBill.vb</DependentUpon>
     </Compile>
-    <Compile Include="formMonthlyBill-new.vb">
+    <Compile Include="formMonthlyBill.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formBlock.Designer.vb">
@@ -222,6 +198,18 @@
     <Compile Include="formDeleteMessTakes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="formItemSale.Designer.vb">
+      <DependentUpon>formItemSale.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formItemSale.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLedger.Designer.vb">
+      <DependentUpon>formLedger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formLedger.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formLogin.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -245,12 +233,6 @@
       <DependentUpon>formViewInventory.vb</DependentUpon>
     </Compile>
     <Compile Include="formViewInventory.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formViewMonthlyItems.Designer.vb">
-      <DependentUpon>formViewMonthlyItems.vb</DependentUpon>
-    </Compile>
-    <Compile Include="formViewMonthlyItems.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formViewStudents.Designer.vb">
@@ -282,32 +264,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Settings.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="formBackupApplication.resx">
-      <DependentUpon>formBackupApplication.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="formAddSupplier.resx">
       <DependentUpon>formAddSupplier.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formEditSettings.resx">
-      <DependentUpon>formEditSettings.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formGrubSignings.resx">
-      <DependentUpon>formGrubSignings.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formItemSale.resx">
-      <DependentUpon>formItemSale.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formLedger.resx">
-      <DependentUpon>formLedger.vb</DependentUpon>
+    <EmbeddedResource Include="formGrub_Entry.resx">
+      <DependentUpon>formGrub_Entry.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formMonthly.resx">
       <DependentUpon>formMonthly.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formMonthlyBill-new.resx">
-      <DependentUpon>formMonthlyBill-new.vb</DependentUpon>
+    <EmbeddedResource Include="formMonthlyBill.resx">
+      <DependentUpon>formMonthlyBill.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formBlock.resx">
       <DependentUpon>formBlock.vb</DependentUpon>
@@ -342,6 +311,12 @@
     <EmbeddedResource Include="formDeleteMessTakes.resx">
       <DependentUpon>formDeleteMessTakes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formItemSale.resx">
+      <DependentUpon>formItemSale.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLedger.resx">
+      <DependentUpon>formLedger.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formLogin.resx">
       <DependentUpon>formLogin.vb</DependentUpon>
     </EmbeddedResource>
@@ -356,9 +331,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formViewInventory.resx">
       <DependentUpon>formViewInventory.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formViewMonthlyItems.resx">
-      <DependentUpon>formViewMonthlyItems.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formViewStudents.resx">
       <DependentUpon>formViewStudents.vb</DependentUpon>

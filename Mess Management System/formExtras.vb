@@ -879,7 +879,7 @@ Public Class formExtras
                 item_name = INAME1.text
 
             End If
-            e.Graphics.DrawString(item_name.Text, tableFont, Brushes.Black, 30, 115)
+            e.Graphics.DrawString(item_name, tableFont, Brushes.Black, 30, 115)
             e.Graphics.DrawString(PRICE1.Text, tableFont, Brushes.Black, 190, 115)
             e.Graphics.DrawString(QTY1.Text, tableFont, Brushes.Black, 240, 115)
             e.Graphics.DrawString(TAX1.Text, tableFont, Brushes.Black, 270, 115)
@@ -992,7 +992,7 @@ Public Class formExtras
                 e.Graphics.DrawString("Thank You !! Have Fun !!", tableFont, Brushes.Black, 70, 235)
             Else
                 If CStr(INAME5.text).Length > 10 Then
-                    item_name = CStr(INAME5.text).Substring(0, 3) + "..." + CStr(INAME5.txt).Substring(CStr(INAME5.text).Length - 6, 6)
+                    item_name = CStr(INAME5.Text).Substring(0, 3) + "..." + CStr(INAME5.Text).Substring(CStr(INAME5.Text).Length - 6, 6)
                 Else
                     item_name = INAME5.text
                 End If

@@ -269,6 +269,42 @@ Namespace My
                 Me("grubSigningsDelimiter") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(), _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.Configuration.DefaultSettingValueAttribute("D:\backup")> _
+        Public Property BackupLocation() As String
+            Get
+                Return CType(Me("BackupLocation"), String)
+            End Get
+            Set(value As String)
+                Me("BackupLocation") = value
+            End Set
+        End Property
+
+        <Global.System.Configuration.UserScopedSettingAttribute(), _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.Configuration.DefaultSettingValueAttribute("D:\MessRepBackup")> _
+        Public Property MessRepBackupLocation() As String
+            Get
+                Return CType(Me("MessRepBackupLocation"), String)
+            End Get
+            Set(value As String)
+                Me("MessRepBackupLocation") = value
+            End Set
+        End Property
+
+        <Global.System.Configuration.UserScopedSettingAttribute(), _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.Configuration.DefaultSettingValueAttribute("")> _
+        Public Property mysqldumpLocation() As String
+            Get
+                Return CType(Me("mysqldumpLocation"), String)
+            End Get
+            Set(value As String)
+                Me("mysqldumpLocation") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

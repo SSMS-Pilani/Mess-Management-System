@@ -5,6 +5,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Mess Management System - Ne
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Mess Management System - Old", "F:\Anc\Mess Management System\Mess Management System\Mess Management System - Old.vbproj", "{3D1AFD1F-457E-42BE-AA07-B25D7560EF54}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Backup Application", "E:\From Sumit Bhaiya\Backup Application\Backup Application\Backup Application.vbproj", "{86AFE398-B1B9-4AA8-AC4B-F94216315775}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{3D1AFD1F-457E-42BE-AA07-B25D7560EF54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D1AFD1F-457E-42BE-AA07-B25D7560EF54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D1AFD1F-457E-42BE-AA07-B25D7560EF54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86AFE398-B1B9-4AA8-AC4B-F94216315775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86AFE398-B1B9-4AA8-AC4B-F94216315775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86AFE398-B1B9-4AA8-AC4B-F94216315775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86AFE398-B1B9-4AA8-AC4B-F94216315775}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
