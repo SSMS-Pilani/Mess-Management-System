@@ -164,7 +164,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("newschema")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("MESS_2")>  _
         Public Property DB_NAME() As String
             Get
                 Return CType(Me("DB_NAME"),String)
