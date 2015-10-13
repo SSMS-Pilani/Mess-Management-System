@@ -79,3 +79,44 @@ D:\Mess Management System\Mess Management System\bin\Debug\MySql.Data.dll
 D:\Mess Management System\Mess Management System\obj\Debug\Mess Management System.exe.manifest
 D:\Mess Management System\Mess Management System\obj\Debug\Mess Management System.application
 D:\Mess Management System\Mess Management System\obj\Debug\Mess_Management_System.formBackupApplication.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\bin\Debug\Mess Management System.exe.config
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess Management System.exe
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess Management System.xml
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess Management System.pdb
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\bin\Debug\Mess Management System.exe.manifest
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\bin\Debug\Mess Management System.application
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\bin\Debug\Mess Management System.exe
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\bin\Debug\Mess Management System.pdb
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\bin\Debug\Mess Management System.xml
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\bin\Debug\MySql.Data.dll
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess Management System - New.vbprojResolveAssemblyReference.cache
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formBackupApplication.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formAddSupplier.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formEditSettings.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formGrubSignings.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formItemSale.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formLedger.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formMonthly.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formMonthlyBill.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formBlock.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formChangePrice.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formControlP.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formDeletedExtras.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formDeletedSupplies.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formDeleteStudentTakes.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formExtras.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formIndentEntry.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formItemDelete.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formAddItem.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formDeleteMessTakes.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formLogin.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formMonthlyCap.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formRebate.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formStudentAccount.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formViewInventory.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formViewMonthlyItems.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.formViewStudents.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess_Management_System.Resources.resources
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess Management System - New.vbproj.GenerateResource.Cache
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess Management System.exe.manifest
+C:\Users\bansod_deven\ssms\Mess-Management-System\Mess Management System\obj\Debug\Mess Management System.application

@@ -30,7 +30,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="DB_NAME" Type="System.String" Scope="User">
-      <Value Profile="(Default)">MESS_2</Value>
+      <Value Profile="(Default)">newschema</Value>
     </Setting>
     <Setting Name="DB_UserName" Type="System.String" Scope="User">
       <Value Profile="(Default)">root</Value>
