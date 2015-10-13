@@ -1,4 +1,4 @@
-﻿Imports MySql.Data.MySqlClient
+Imports MySql.Data.MySqlClient
 Public Class formRebate
     Dim con As New connection 'Mysql Connection used through the Form
 
@@ -52,14 +52,15 @@ Public Class formRebate
                 ElseIf S_ID.Text.Length = 6 And (S_ID.Text.Contains("P") Or S_ID.Text.Contains("p")) Then
                     S_ID.Text = S_ID.Text.Substring(0, 1) + "20" + S_ID.Text.Substring(1, 5) + "P"
                 End If
-                Try
+				 
+	         Try
                     con.connect()
                     Dim query As String = "Select NAME from student where s_id = '" + S_ID.Text.ToString + "'"
                     Dim comm As New MySqlCommand(query, con.conn)
                     Dim dr As MySqlDataReader = comm.ExecuteReader()
                     If dr.Read() Then
                         tbName.Text = dr.Item(0)
-                        proceedAndEnable(S_ID, tb_Meals_not_taken)
+                        proceedAndEnable(S_ID, tb_Meals_not_taken)/
                     Else
                         MsgBox("Cannot Find Student ID!! Please Enter Proper S_ID !!")
                         S_ID.Text = ""
@@ -76,8 +77,28 @@ Public Class formRebate
 
     'Handles Confirm Clicked, Inserts query into Rebate Table in DB
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Confirm.Click
-        If tb_Meals_not_taken.Text > My.Settings.Rebate_Min_days Then
-            Try
+	IF tb_Meals_not_taken.Text > My.Settings.Rebate_Min_days Then
+	Dim store as Integer=0
+	store=tb_Meals_not_taken.text
+	Dim temp As Integer = 0
+    For i As Integer = 0 To DataGridView1.RowCount - 1
+    For j As Integer = 0 To DataGridView1.ColumnCount - 1
+    If DataGridView1.Rows(i).Cells(j).Value.ToString = S_ID.Text Then
+	Try
+	con.connect
+	Dim query1 as string="UPDATE MONTHLY_DETAILS SET MEALS_NOT_TAKEN=tb_Meals_not_taken.text+store"
+	 Dim comm As New MySqlCommand(query1, con.conn)
+                    Dim dr As MySqlDataReader = comm.ExecuteReader()
+					comm.ExecuteNonQuery()
+                MsgBox("Rebate Added")
+                reload()
+            Catch ex As Exception
+                MsgBox("Error Occured! Please Try Again!")
+                MsgBox(ex.Message.ToString)
+            End Try
+        Else
+		
+          Try
                 con.connect()
                 Dim query As String = "INSERT INTO MONTHLY_DETAILS(S_ID,MONTH_YEAR,MEALS_NOT_TAKEN) VALUES('" + S_ID.Text.ToString + "','" + Format(Today.Date, "yyyy-MM") + "-00','" + tb_Meals_not_taken.Text + "') ON DUPLICATE KEY UPDATE MEALS_NOT_TAKEN = '" + tb_Meals_not_taken.Text + "'"
                 Dim comm As New MySqlCommand(query, con.conn)
@@ -88,8 +109,11 @@ Public Class formRebate
                 MsgBox("Error Occured! Please Try Again!")
                 MsgBox(ex.Message.ToString)
             End Try
-        Else
-            MsgBox("The Minimum Period for Rebates is 3 Days!! So, Data Not Inserted !!")
+        End If
+		
+		Else
+		
+           MsgBox("The Minimum Period for Rebates is 3 Days!! So, Data Not Inserted !!")
             reload()
         End If
     End Sub
