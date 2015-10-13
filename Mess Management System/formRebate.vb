@@ -1,4 +1,4 @@
-﻿Imports MySql.Data.MySqlClient
+Imports MySql.Data.MySqlClient
 Public Class formRebate
     Dim con As New connection 'Mysql Connection used through the Form
 
@@ -22,7 +22,11 @@ Public Class formRebate
     Private Sub fill()
         Try
             con.connect()
-            Dim query As String = "SELECT monthly_details.S_ID, student.NAME ,monthly_details.MEALS_NOT_TAKEN, student.ROOM, student.BHAWAN from monthly_details INNER JOIN student ON student.s_Id = monthly_details.S_ID where MONTH_YEAR LIKE '" + MonthCalendar1.SelectionRange.Start.Date.ToString("yyyy-MM") + "%' ORDER BY student.BHAWAN,student.ROOM"
+            Dim query As String = "SELECT monthly_details.S_ID, student.NAME ,monthly_details.MEALS_NOT_TAKEN, " _
+                                  + "student.ROOM, student.BHAWAN from monthly_details INNER JOIN student " _
+                                  + "ON student.s_Id = monthly_details.S_ID where MONTH_YEAR LIKE '" _
+                                  + MonthCalendar1.SelectionRange.Start.Date.ToString("yyyy-MM") _
+                                  + "%' ORDER BY student.BHAWAN,student.ROOM"
             Dim DR As MySqlDataReader
             Dim comm As New MySqlCommand(query, con.conn)
             DR = comm.ExecuteReader()
@@ -34,7 +38,7 @@ Public Class formRebate
             MsgBox(ex.Message.ToString)
             reload()
         End Try
-        
+
     End Sub
 
 
@@ -52,7 +56,8 @@ Public Class formRebate
                 ElseIf S_ID.Text.Length = 6 And (S_ID.Text.Contains("P") Or S_ID.Text.Contains("p")) Then
                     S_ID.Text = S_ID.Text.Substring(0, 1) + "20" + S_ID.Text.Substring(1, 5) + "P"
                 End If
-                Try
+
+	         Try
                     con.connect()
                     Dim query As String = "Select NAME from student where s_id = '" + S_ID.Text.ToString + "'"
                     Dim comm As New MySqlCommand(query, con.conn)
@@ -76,19 +81,56 @@ Public Class formRebate
 
     'Handles Confirm Clicked, Inserts query into Rebate Table in DB
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Confirm.Click
-        If tb_Meals_not_taken.Text > My.Settings.Rebate_Min_days Then
-            Try
-                con.connect()
-                Dim query As String = "INSERT INTO MONTHLY_DETAILS(S_ID,MONTH_YEAR,MEALS_NOT_TAKEN) VALUES('" + S_ID.Text.ToString + "','" + Format(Today.Date, "yyyy-MM") + "-00','" + tb_Meals_not_taken.Text + "') ON DUPLICATE KEY UPDATE MEALS_NOT_TAKEN = '" + tb_Meals_not_taken.Text + "'"
-                Dim comm As New MySqlCommand(query, con.conn)
-                comm.ExecuteNonQuery()
-                MsgBox("Rebate Added")
-                reload()
-            Catch ex As Exception
-                MsgBox("Error Occured! Please Try Again!")
-                MsgBox(ex.Message.ToString)
-            End Try
+	IF tb_Meals_not_taken.Text > My.Settings.Rebate_Min_days Then
+            
+            Dim test_if_exists_query As String
+            test_if_exists_query = "SELECT * FROM MONTHLY_DETAILS WHERE S_ID = '" + S_ID.Text.ToString _
+                + "' AND MONTH_YEAR = '" + Format(Today.Date, "yyyy-MM").ToString + "-00'"
+            Dim test_comm As New MySqlCommand(test_if_exists_query, con.conn)
+            con.connect()
+            Dim test_dr As MySqlDataReader = test_comm.ExecuteReader()
+            Dim orig_rebate As Integer = 0
+
+
+            ' If Student rebate for the month is already added, add new rebate to previous
+            ' and if Not Insert a new row for the student
+            If test_dr.Read() Then
+                orig_rebate = test_dr.Item(2)
+                Try
+                    test_dr.Close()
+                    Dim query1 As String = "UPDATE MONTHLY_DETAILS SET MEALS_NOT_TAKEN = '" _
+                        + (orig_rebate + CInt(tb_Meals_not_taken.Text)).ToString + "' WHERE S_ID = '" _
+                        + S_ID.Text.ToString + "' AND " _
+                        + "MONTH_YEAR = '" + Format(Today.Date, "yyyy-MM").ToString + "-00'"
+                    Dim comm As New MySqlCommand(query1, con.conn)
+                    comm.ExecuteNonQuery()
+                    MsgBox("Rebate Added/ Updated")
+                    reload()
+                Catch ex As Exception
+                    MsgBox("Error Occured! Please Try Again!")
+                    MsgBox(ex.Message.ToString)
+                End Try
+            Else
+                Try
+                    test_dr.Close()
+                    test_dr.Dispose()
+                    con.connect()
+                    Dim query As String = "INSERT INTO MONTHLY_DETAILS(S_ID,MONTH_YEAR,MEALS_NOT_TAKEN) VALUES('" _
+                                          + S_ID.Text.ToString + "','" + Format(Today.Date, "yyyy-MM") + "-00','" _
+                                          + tb_Meals_not_taken.Text + "') ON DUPLICATE KEY UPDATE MEALS_NOT_TAKEN = '" _
+                                          + tb_Meals_not_taken.Text + "'"
+                    Dim comm As New MySqlCommand(query, con.conn)
+                    comm.ExecuteNonQuery()
+                    MsgBox("Rebate Added")
+                    reload()
+                Catch ex As Exception
+                    MsgBox("Error Occured! Please Try Again!")
+                    MsgBox(ex.Message.ToString)
+                End Try
+            End If
+
         Else
+
             MsgBox("The Minimum Period for Rebates is 3 Days!! So, Data Not Inserted !!")
             reload()
         End If
