@@ -31,8 +31,7 @@ Public Class formStudentAccount
     Private Sub fill()
         Try
             con.connect()
-            Dim query As String = "SELECT student_takes.BILL_ID, student_takes.T_ID, student_takes.S_ID, item.NAME, student_takes.QTY, student_takes.DOR, student_takes.RATE, student_takes.E_ID, student_takes.TAX from student_takes INNER JOIN item ON item.ITEM_ID=student_takes.ITEM_ID  where date_format(Date(DOR),'%d-%m-%Y') like '%" + MonthCalendar1.SelectionRange.Start.Month.ToString + "-" + MonthCalendar1.SelectionRange.Start.Year.ToString + "' order by dor desc"
-            'where date_format(Date(DOR),'%d-%m-%Y') like '%" + MonthCalendar1.SelectionRange.Start.Month.ToString + "-" + MonthCalendar1.SelectionRange.Start.Year.ToString + "' ORDER BY DOR DESC"
+            Dim query As String = "create view stuacc as select student_takes.BILL_ID,student_takes.BILL_ID, student_takes.T_ID, student_takes.S_ID, item.NAME, student_takes.QTY, student_takes.DOR, student_takes.RATE, student_takes.E_ID , student_takes.TAX from student_takes , item where item.ITEM_ID=student_takes.ITEM_ID;"
             Dim comm As New MySqlCommand(query, con.conn)
             Dim dr As MySqlDataReader
             Dim dt As New DataTable
