@@ -243,6 +243,7 @@ Public Class formExtras
                                     SNAME.Text = dr.Item("NAME")
                                     ROOM.Text = dr.Item("ROOM")
                                     BHAWAN.Text = dr.Item("BHAWAN")
+                                    pit2.text = dr.item("PIT")
                                     PictureBox1.ImageLocation = "D:\PHOTOS\" + ID.Text.ToString.Remove(11, 1) + ".png"
                                     'GroupBox2.Enabled = True
                                     SendKeys.Send("{TAB}")
@@ -260,13 +261,13 @@ Public Class formExtras
                                     PictureBox1.Image = PictureBox1.ErrorImage
                                     block.Dispose()
                                 End If
-                                If PIT.Text = 1 Then
+                                If pit2.Text = 1 Then
                                     ICODE1.Enabled = True
                                 End If
-                                If PIT.Text = 2 And hour > 0 Then
+                                If pit2.Text = 2 And hour > 0 Then
                                     ICODE1.Enabled = True
                                 End If
-                                If PIT.Text = 2 And hour < 0 Then
+                                If pit2.Text = 2 And hour < 0 Then
 
                                     MsgBox("Pit stop timings over")
 
