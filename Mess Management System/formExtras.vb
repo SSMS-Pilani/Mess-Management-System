@@ -6,6 +6,7 @@ Public Class formExtras
     Dim j As Integer 'For no. of Transactions on a Bill
     Dim tableFont, titlefont, headfont As Font 'Used in Printing the Reciept
     Dim bill_no As Integer 'Current Bill No
+    Dim PIT As Integer
 
     'On Form Load
     Private Sub formExtras_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -172,7 +173,7 @@ Public Class formExtras
                                     BHAWAN.Text = "INVALID"
                                     PictureBox1.Image = PictureBox1.ErrorImage
                                     block.Dispose()
-                                ElseIf Bhawan.Text=
+
                                 End If
 
                             Catch de As MySqlException
@@ -247,8 +248,9 @@ Public Class formExtras
                                     SendKeys.Send("{TAB}")
                                     e.Handled = True
                                     S_ID.ReadOnly = True
-                                    
-                                ElseIf IsDBNull(dr.Item(0)) Then
+                                End If
+
+                                If IsDBNull(dr.Item(0)) Then
                                     MsgBox("Student Not Found!! Please Enter Proper S_ID")
                                     S_ID.Text = ""
                                     ID.Text = "INVALID"
@@ -257,13 +259,16 @@ Public Class formExtras
                                     BHAWAN.Text = "INVALID"
                                     PictureBox1.Image = PictureBox1.ErrorImage
                                     block.Dispose()
-                                If PIT.Text=1 Then
-                                     ICODE1.Enabled = True
-                                If PIT.Text=2 And hour>0 Then 
-                                ICODE1.Enabled=True
-                                If PIT.Text=2 And hour<0 Then
+                                End If
+                                If PIT.Text = 1 Then
+                                    ICODE1.Enabled = True
+                                End If
+                                If PIT.Text = 2 And hour > 0 Then
+                                    ICODE1.Enabled = True
+                                End If
+                                If PIT.Text = 2 And hour < 0 Then
 
-                                MsgBox("Pit stop timings over")
+                                    MsgBox("Pit stop timings over")
 
                                 End If
 
