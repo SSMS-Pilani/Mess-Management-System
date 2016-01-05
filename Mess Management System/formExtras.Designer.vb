@@ -1,4 +1,4 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class formExtras
     Inherits System.Windows.Forms.Form
 
@@ -30,7 +30,6 @@ Partial Class formExtras
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.SIDlbl = New System.Windows.Forms.Label()
         Me.S_ID = New System.Windows.Forms.TextBox()
-        Me.PIT=New System.Windows.Forms.TextBox()
         Me.NAMElbl = New System.Windows.Forms.Label()
         Me.IDNOlbl = New System.Windows.Forms.Label()
         Me.BHAWANlbl = New System.Windows.Forms.Label()
@@ -90,6 +89,8 @@ Partial Class formExtras
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PrintDocument2 = New System.Drawing.Printing.PrintDocument()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.pit2 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -670,12 +671,30 @@ Partial Class formExtras
         Me.Button2.Text = "Query ON/OFF"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'pit2
+        '
+        Me.pit2.Location = New System.Drawing.Point(127, 557)
+        Me.pit2.Name = "pit2"
+        Me.pit2.Size = New System.Drawing.Size(100, 20)
+        Me.pit2.TabIndex = 220
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(27, 565)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(24, 13)
+        Me.Label3.TabIndex = 221
+        Me.Label3.Text = "PIT"
+        '
         'formExtras
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(1010, 685)
+        Me.ClientSize = New System.Drawing.Size(804, 582)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.pit2)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Sub_total)
@@ -816,4 +835,6 @@ Partial Class formExtras
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents PrintDocument2 As System.Drawing.Printing.PrintDocument
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents pit2 As System.Windows.Forms.TextBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class
