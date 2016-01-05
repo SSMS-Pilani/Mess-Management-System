@@ -112,7 +112,8 @@ Public Class formExtras
         'S_ID.Enabled = False
         'End If
     End Sub
-    Dim st As String = DateTime.Now.ToString("hh:mm:ss")
+    Dim hour As String = DateTime.Now.ToString("%H")
+    Dim minute As String= DateTime.Now.ToString("%mm")
 
 
     
@@ -256,16 +257,13 @@ Public Class formExtras
                                     BHAWAN.Text = "INVALID"
                                     PictureBox1.Image = PictureBox1.ErrorImage
                                     block.Dispose()
-                                If BHAWAN.Text=My.Settings.messShortName Then
+                                If PIT.Text=1 Then
                                      ICODE1.Enabled = True
-                                If BHAWAN.Text!=My.Settings.messShortName And (09:30:00<st<11:30:00 Or 13:30:00<st<19:30:00)Then 
+                                If PIT.Text=2 And hour>0 Then 
                                 ICODE1.Enabled=True
-                                Else
-                                 MsgBox("Pit stop timings over")
+                                If PIT.Text=2 And hour<0 Then
 
-
-
-
+                                MsgBox("Pit stop timings over")
 
                                 End If
 
