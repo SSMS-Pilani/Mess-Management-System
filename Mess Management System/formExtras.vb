@@ -1,4 +1,4 @@
-﻿Imports MySql.Data.MySqlClient
+Imports MySql.Data.MySqlClient
 Public Class formExtras
     Public maxbid, new_bid As Integer
     Dim conn As New connection  'Mysql Connection used through the Form
@@ -16,7 +16,7 @@ Public Class formExtras
         'End If
         Me.KeyPreview = True
         'GroupBox2.Enabled = False
-        countdown.Text = 6
+            countdown.Text = 6
         countdown.Hide()
 
         If My.Settings.Query_ON = True Then
@@ -112,6 +112,10 @@ Public Class formExtras
         'S_ID.Enabled = False
         'End If
     End Sub
+    Dim st As String = DateTime.Now.ToString("hh:mm:ss")
+
+
+    
 
     'Handles Enter Pressed on S_ID
     Private Sub s_id_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles S_ID.KeyPress
@@ -147,7 +151,7 @@ Public Class formExtras
                                 query = "SELECT * FROM STUDENT WHERE S_ID='" + S_ID.Text.ToString + "'"
                                 Dim comm2 As New MySqlCommand(query, conn.conn)
                                 dr = comm2.ExecuteReader
-                                If dr.Read() And Not IsDBNull(dr.Item(0)) Then
+                                If dr.Read() And Not IsDBNull(dr.Item(0))Then
                                     ID.Text = dr.Item("IDNO")
                                     SNAME.Text = dr.Item("NAME")
                                     ROOM.Text = dr.Item("ROOM")
@@ -167,6 +171,7 @@ Public Class formExtras
                                     BHAWAN.Text = "INVALID"
                                     PictureBox1.Image = PictureBox1.ErrorImage
                                     block.Dispose()
+                                ElseIf Bhawan.Text=
                                 End If
 
                             Catch de As MySqlException
@@ -241,7 +246,7 @@ Public Class formExtras
                                     SendKeys.Send("{TAB}")
                                     e.Handled = True
                                     S_ID.ReadOnly = True
-                                    ICODE1.Enabled = True
+                                    
                                 ElseIf IsDBNull(dr.Item(0)) Then
                                     MsgBox("Student Not Found!! Please Enter Proper S_ID")
                                     S_ID.Text = ""
@@ -251,6 +256,17 @@ Public Class formExtras
                                     BHAWAN.Text = "INVALID"
                                     PictureBox1.Image = PictureBox1.ErrorImage
                                     block.Dispose()
+                                If BHAWAN.Text=My.Settings.messShortName Then
+                                     ICODE1.Enabled = True
+                                If BHAWAN.Text!=My.Settings.messShortName And (09:30:00<st<11:30:00 Or 13:30:00<st<19:30:00)Then 
+                                ICODE1.Enabled=True
+                                Else
+                                 MsgBox("Pit stop timings over")
+
+
+
+
+
                                 End If
 
                             Catch de As MySqlException
