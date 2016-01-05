@@ -30,6 +30,7 @@ Partial Class formExtras
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.SIDlbl = New System.Windows.Forms.Label()
         Me.S_ID = New System.Windows.Forms.TextBox()
+        Me.PIT=New System.Windows.Forms.TextBox()
         Me.NAMElbl = New System.Windows.Forms.Label()
         Me.IDNOlbl = New System.Windows.Forms.Label()
         Me.BHAWANlbl = New System.Windows.Forms.Label()
