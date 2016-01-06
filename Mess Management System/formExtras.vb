@@ -271,11 +271,11 @@ Public Class formExtras
                                 End If
                                 If pit2.Text = 2 And ((9 <= hour < 10 And 30 < min < 60) Or (10 <= hour < 11) Or (hour = 11 And 0 < min < 30) Or (hour = 13 And 30 < min < 60) Or (14 <= hour < 19) Or (hour = 19 And 0 < min < 30)) Then
                                     ICODE1.Enabled = True
-                                    MsgBox("23")
-                                End If
+                                    
+                            End If
 
                                 If pit2.Text = 2 And ((7 < hour < 9) Or (hour = 9 And 0 < min <= 30) Or (hour = 11 And 30 <= min < 60) Or (12 <= hour < 13) Or (hour = 13 And 0 < min <= 30) Or (hour = 19 And 30 <= min < 60) Or (hour >= 20)) Then
-                                    MsgBox("25")
+                        
 
                                     MsgBox("Pit stop timings over")
 
