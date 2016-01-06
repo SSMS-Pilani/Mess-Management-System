@@ -1,4 +1,4 @@
-﻿Imports MySql.Data.MySqlClient
+Imports MySql.Data.MySqlClient
 Public Class formExtras
     Public maxbid, new_bid As Integer
     Dim conn As New connection  'Mysql Connection used through the Form
@@ -6,6 +6,7 @@ Public Class formExtras
     Dim j As Integer 'For no. of Transactions on a Bill
     Dim tableFont, titlefont, headfont As Font 'Used in Printing the Reciept
     Dim bill_no As Integer 'Current Bill No
+    Dim PIT As Integer
 
     'On Form Load
     Private Sub formExtras_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -113,6 +114,15 @@ Public Class formExtras
         'End If
     End Sub
 
+    Dim moment As New System.DateTime
+
+    Dim hour As Integer = DateTime.Now.Hour
+    Dim min As Integer = DateTime.Now.Minute
+
+
+
+
+
     'Handles Enter Pressed on S_ID
     Private Sub s_id_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles S_ID.KeyPress
         If Asc(e.KeyChar) = Keys.Enter Then
@@ -167,10 +177,11 @@ Public Class formExtras
                                     BHAWAN.Text = "INVALID"
                                     PictureBox1.Image = PictureBox1.ErrorImage
                                     block.Dispose()
+
                                 End If
 
                             Catch de As MySqlException
-                                MsgBox("Error Occured! Please Try Again!")
+                                MsgBox("Error Occured! Please Try Again2")
                                 MsgBox(de.Message.ToString)
                                 S_ID.Text = ""
                                 ID.Text = "INVALID"
@@ -182,7 +193,7 @@ Public Class formExtras
                             End Try
                         End If
                     Catch ex As MySqlException
-                        MsgBox("Error Occured ! Please try Again !")
+                        MsgBox("Error Occured ! Please try Again 1")
                         MsgBox(ex.Message.ToString)
                     End Try
                 Else
@@ -203,7 +214,7 @@ Public Class formExtras
                             MsgBox("Cash Cannot Work As CASH ACCOUNT HAS NOT BEEN ADDED")
                         End If
                     Catch ex As Exception
-                        MsgBox("Error Occured! Please Try Again!")
+                        MsgBox("Error Occured! Please Try Again3")
                         MsgBox(ex.Message.ToString)
                         S_ID.Text = ""
                         S_ID.Focus()
@@ -236,13 +247,15 @@ Public Class formExtras
                                     SNAME.Text = dr.Item("NAME")
                                     ROOM.Text = dr.Item("ROOM")
                                     BHAWAN.Text = dr.Item("BHAWAN")
+                                    pit2.text = dr.item("PIT")
                                     PictureBox1.ImageLocation = "D:\PHOTOS\" + ID.Text.ToString.Remove(11, 1) + ".png"
                                     'GroupBox2.Enabled = True
                                     SendKeys.Send("{TAB}")
                                     e.Handled = True
                                     S_ID.ReadOnly = True
-                                    ICODE1.Enabled = True
-                                ElseIf IsDBNull(dr.Item(0)) Then
+                                End If
+
+                                If IsDBNull(dr.Item(0)) Then
                                     MsgBox("Student Not Found!! Please Enter Proper S_ID")
                                     S_ID.Text = ""
                                     ID.Text = "INVALID"
@@ -251,6 +264,19 @@ Public Class formExtras
                                     BHAWAN.Text = "INVALID"
                                     PictureBox1.Image = PictureBox1.ErrorImage
                                     block.Dispose()
+                                End If
+                                If pit2.Text = 1 Then
+                                    ICODE1.Enabled = True
+
+
+
+
+
+
+                                ElseIf pit2.text = 2 And ((hour = 7 And (min >= 30 And min < 60)) Or (hour >= 8 And hour < 9) Or (hour = 9 And (min >= 0 And min <= 30)) Or (hour = 11 And (min >= 30 And min < 60)) Or (hour >= 12 And hour < 13) Or (hour = 13 And (min >= 0 And min <= 30)) Or (hour >= 19 And hour < 20) Or (hour = 20 And (min >= 0 And min < 30))) Then
+                                    MsgBox("Pit stop timings over")
+                                Else
+                                    ICODE1.Enabled = True
                                 End If
 
                             Catch de As MySqlException
@@ -846,8 +872,8 @@ Public Class formExtras
     End Sub
 
     'Prints the Current Bill
-    
-            Private Sub print_bill(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+
+    Private Sub print_bill(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
         Dim dat As String
         Dim tot As Double
         Dim sid As String = S_ID.Text.ToString
