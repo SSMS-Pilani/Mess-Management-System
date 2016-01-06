@@ -17,7 +17,7 @@ Public Class formExtras
         'End If
         Me.KeyPreview = True
         'GroupBox2.Enabled = False
-            countdown.Text = 6
+        countdown.Text = 6
         countdown.Hide()
 
         If My.Settings.Query_ON = True Then
@@ -113,11 +113,15 @@ Public Class formExtras
         'S_ID.Enabled = False
         'End If
     End Sub
-    Dim hour As String = DateTime.Now.ToString("%H")
-    Dim minute As String= DateTime.Now.ToString("%mm")
+
+    Dim moment As New System.DateTime
+
+    Dim hour As Integer = moment.Hour
+    Dim min As Integer = moment.Minute
 
 
-    
+
+
 
     'Handles Enter Pressed on S_ID
     Private Sub s_id_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles S_ID.KeyPress
@@ -153,7 +157,7 @@ Public Class formExtras
                                 query = "SELECT * FROM STUDENT WHERE S_ID='" + S_ID.Text.ToString + "'"
                                 Dim comm2 As New MySqlCommand(query, conn.conn)
                                 dr = comm2.ExecuteReader
-                                If dr.Read() And Not IsDBNull(dr.Item(0))Then
+                                If dr.Read() And Not IsDBNull(dr.Item(0)) Then
                                     ID.Text = dr.Item("IDNO")
                                     SNAME.Text = dr.Item("NAME")
                                     ROOM.Text = dr.Item("ROOM")
@@ -177,7 +181,7 @@ Public Class formExtras
                                 End If
 
                             Catch de As MySqlException
-                                MsgBox("Error Occured! Please Try Again!")
+                                MsgBox("Error Occured! Please Try Again2")
                                 MsgBox(de.Message.ToString)
                                 S_ID.Text = ""
                                 ID.Text = "INVALID"
@@ -189,7 +193,7 @@ Public Class formExtras
                             End Try
                         End If
                     Catch ex As MySqlException
-                        MsgBox("Error Occured ! Please try Again !")
+                        MsgBox("Error Occured ! Please try Again 1")
                         MsgBox(ex.Message.ToString)
                     End Try
                 Else
@@ -210,7 +214,7 @@ Public Class formExtras
                             MsgBox("Cash Cannot Work As CASH ACCOUNT HAS NOT BEEN ADDED")
                         End If
                     Catch ex As Exception
-                        MsgBox("Error Occured! Please Try Again!")
+                        MsgBox("Error Occured! Please Try Again3")
                         MsgBox(ex.Message.ToString)
                         S_ID.Text = ""
                         S_ID.Focus()
@@ -262,12 +266,16 @@ Public Class formExtras
                                     block.Dispose()
                                 End If
                                 If pit2.Text = 1 Then
+
                                     ICODE1.Enabled = True
                                 End If
-                                If pit2.Text = 2 And hour > 0 Then
+                                If pit2.Text = 2 And ((9 <= hour < 10 And 30 < min < 60) Or (10 <= hour < 11) Or (hour = 11 And 0 < min < 30) Or (hour = 13 And 30 < min < 60) Or (14 <= hour < 19) Or (hour = 19 And 0 < min < 30)) Then
                                     ICODE1.Enabled = True
+                                    MsgBox("23")
                                 End If
-                                If pit2.Text = 2 And hour < 0 Then
+
+                                If pit2.Text = 2 And ((7 < hour < 9) Or (hour = 9 And 0 < min <= 30) Or (hour = 11 And 30 <= min < 60) Or (12 <= hour < 13) Or (hour = 13 And 0 < min <= 30) Or (hour = 19 And 30 <= min < 60) Or (hour >= 20)) Then
+                                    MsgBox("25")
 
                                     MsgBox("Pit stop timings over")
 
@@ -866,8 +874,8 @@ Public Class formExtras
     End Sub
 
     'Prints the Current Bill
-    
-            Private Sub print_bill(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+
+    Private Sub print_bill(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
         Dim dat As String
         Dim tot As Double
         Dim sid As String = S_ID.Text.ToString
