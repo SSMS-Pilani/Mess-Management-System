@@ -116,8 +116,8 @@ Public Class formExtras
 
     Dim moment As New System.DateTime
 
-    Dim hour As Integer = moment.Hour
-    Dim min As Integer = moment.Minute
+    Dim hour As Integer = DateTime.Now.Hour
+    Dim min As Integer = DateTime.Now.Minute
 
 
 
@@ -266,19 +266,17 @@ Public Class formExtras
                                     block.Dispose()
                                 End If
                                 If pit2.Text = 1 Then
-
                                     ICODE1.Enabled = True
-                                End If
-                                If pit2.Text = 2 And ((9 <= hour < 10 And 30 < min < 60) Or (10 <= hour < 11) Or (hour = 11 And 0 < min < 30) Or (hour = 13 And 30 < min < 60) Or (14 <= hour < 19) Or (hour = 19 And 0 < min < 30)) Then
-                                    ICODE1.Enabled = True
-                                    
-                            End If
 
-                                If pit2.Text = 2 And ((7 < hour < 9) Or (hour = 9 And 0 < min <= 30) Or (hour = 11 And 30 <= min < 60) Or (12 <= hour < 13) Or (hour = 13 And 0 < min <= 30) Or (hour = 19 And 30 <= min < 60) Or (hour >= 20)) Then
-                        
 
+
+
+
+
+                                ElseIf pit2.text = 2 And ((hour = 7 And (min >= 30 And min < 60)) Or (hour >= 8 And hour < 9) Or (hour = 9 And (min >= 0 And min <= 30)) Or (hour = 11 And (min >= 30 And min < 60)) Or (hour >= 12 And hour < 13) Or (hour = 13 And (min >= 0 And min <= 30)) Or (hour >= 19 And hour < 20) Or (hour = 20 And (min >= 0 And min < 30))) Then
                                     MsgBox("Pit stop timings over")
-
+                                Else
+                                    ICODE1.Enabled = True
                                 End If
 
                             Catch de As MySqlException
