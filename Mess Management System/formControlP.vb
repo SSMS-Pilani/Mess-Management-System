@@ -147,4 +147,7 @@
     Private Sub backupButton_Click(sender As Object, e As EventArgs) Handles backupButton.Click
         formBackupApplication.show()
     End Sub
+    Private Sub Add_Student_Click(sender As Object, e As EventArgs) Handles Add_Student.Click
+        formAddStudent.Show()
+     End Sub
 End Class
