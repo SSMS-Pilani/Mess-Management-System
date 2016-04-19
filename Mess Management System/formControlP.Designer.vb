@@ -1,4 +1,4 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class formControlP
     Inherits System.Windows.Forms.Form
 
@@ -32,18 +32,19 @@ Partial Class formControlP
         Me.Indent_Entry = New System.Windows.Forms.Button()
         Me.Extras = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Monthly_Cap = New System.Windows.Forms.Button()
         Me.Add_Supplier = New System.Windows.Forms.Button()
         Me.Change_SP = New System.Windows.Forms.Button()
         Me.Student_acc = New System.Windows.Forms.Button()
         Me.Add_item = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.backupButton = New System.Windows.Forms.Button()
         Me.Grub_Signings = New System.Windows.Forms.Button()
         Me.Monthly_Bill = New System.Windows.Forms.Button()
         Me.Deleted_Supplies = New System.Windows.Forms.Button()
         Me.Deleted_Extras = New System.Windows.Forms.Button()
         Me.Item_Sale = New System.Windows.Forms.Button()
-        Me.backupButton = New System.Windows.Forms.Button()
+        Me.Monthly_Cap = New System.Windows.Forms.Button()
+        Me.Add_Student = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -166,6 +167,7 @@ Partial Class formControlP
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.GroupBox2.Controls.Add(Me.Add_Student)
         Me.GroupBox2.Controls.Add(Me.Monthly_Cap)
         Me.GroupBox2.Controls.Add(Me.Add_Supplier)
         Me.GroupBox2.Controls.Add(Me.Change_SP)
@@ -173,21 +175,10 @@ Partial Class formControlP
         Me.GroupBox2.Controls.Add(Me.Add_item)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 270)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(867, 83)
+        Me.GroupBox2.Size = New System.Drawing.Size(867, 142)
         Me.GroupBox2.TabIndex = 15
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Admin Panel"
-        '
-        'Monthly_Cap
-        '
-        Me.Monthly_Cap.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Monthly_Cap.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.Monthly_Cap.Location = New System.Drawing.Point(717, 22)
-        Me.Monthly_Cap.Name = "Monthly_Cap"
-        Me.Monthly_Cap.Size = New System.Drawing.Size(141, 49)
-        Me.Monthly_Cap.TabIndex = 16
-        Me.Monthly_Cap.Text = "Monthly Cap"
-        Me.Monthly_Cap.UseVisualStyleBackColor = True
         '
         'Add_Supplier
         '
@@ -242,12 +233,23 @@ Partial Class formControlP
         Me.GroupBox3.Controls.Add(Me.Deleted_Supplies)
         Me.GroupBox3.Controls.Add(Me.Deleted_Extras)
         Me.GroupBox3.Controls.Add(Me.Item_Sale)
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 368)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 418)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(867, 140)
+        Me.GroupBox3.Size = New System.Drawing.Size(867, 90)
         Me.GroupBox3.TabIndex = 16
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Reports"
+        '
+        'backupButton
+        '
+        Me.backupButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.backupButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.backupButton.Location = New System.Drawing.Point(590, 84)
+        Me.backupButton.Name = "backupButton"
+        Me.backupButton.Size = New System.Drawing.Size(215, 49)
+        Me.backupButton.TabIndex = 22
+        Me.backupButton.Text = "Backup"
+        Me.backupButton.UseVisualStyleBackColor = True
         '
         'Grub_Signings
         '
@@ -304,16 +306,27 @@ Partial Class formControlP
         Me.Item_Sale.Text = "View Item Sale"
         Me.Item_Sale.UseVisualStyleBackColor = True
         '
-        'backupButton
+        'Monthly_Cap
         '
-        Me.backupButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.backupButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.backupButton.Location = New System.Drawing.Point(590, 84)
-        Me.backupButton.Name = "backupButton"
-        Me.backupButton.Size = New System.Drawing.Size(215, 49)
-        Me.backupButton.TabIndex = 22
-        Me.backupButton.Text = "Backup"
-        Me.backupButton.UseVisualStyleBackColor = True
+        Me.Monthly_Cap.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Monthly_Cap.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.Monthly_Cap.Location = New System.Drawing.Point(717, 22)
+        Me.Monthly_Cap.Name = "Monthly_Cap"
+        Me.Monthly_Cap.Size = New System.Drawing.Size(141, 49)
+        Me.Monthly_Cap.TabIndex = 16
+        Me.Monthly_Cap.Text = "Monthly Cap"
+        Me.Monthly_Cap.UseVisualStyleBackColor = True
+        '
+        'Add_Student
+        '
+        Me.Add_Student.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Add_Student.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.Add_Student.Location = New System.Drawing.Point(376, 87)
+        Me.Add_Student.Name = "Add_Student"
+        Me.Add_Student.Size = New System.Drawing.Size(159, 49)
+        Me.Add_Student.TabIndex = 18
+        Me.Add_Student.Text = "Add Student"
+        Me.Add_Student.UseVisualStyleBackColor = True
         '
         'formControlP
         '
@@ -353,7 +366,8 @@ Partial Class formControlP
     Friend WithEvents Item_Sale As System.Windows.Forms.Button
     Friend WithEvents Monthly_Bill As System.Windows.Forms.Button
     Friend WithEvents Rebate As System.Windows.Forms.Button
-    Friend WithEvents Monthly_Cap As System.Windows.Forms.Button
     Friend WithEvents Grub_Signings As System.Windows.Forms.Button
     Friend WithEvents backupButton As System.Windows.Forms.Button
+    Friend WithEvents Add_Student As System.Windows.Forms.Button
+    Friend WithEvents Monthly_Cap As System.Windows.Forms.Button
 End Class
