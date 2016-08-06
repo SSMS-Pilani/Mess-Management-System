@@ -32,6 +32,8 @@ Partial Class formControlP
         Me.Indent_Entry = New System.Windows.Forms.Button()
         Me.Extras = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Add_Student = New System.Windows.Forms.Button()
+        Me.Monthly_Cap = New System.Windows.Forms.Button()
         Me.Add_Supplier = New System.Windows.Forms.Button()
         Me.Change_SP = New System.Windows.Forms.Button()
         Me.Student_acc = New System.Windows.Forms.Button()
@@ -43,8 +45,7 @@ Partial Class formControlP
         Me.Deleted_Supplies = New System.Windows.Forms.Button()
         Me.Deleted_Extras = New System.Windows.Forms.Button()
         Me.Item_Sale = New System.Windows.Forms.Button()
-        Me.Monthly_Cap = New System.Windows.Forms.Button()
-        Me.Add_Student = New System.Windows.Forms.Button()
+        Me.btnClearInventory = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -167,6 +168,7 @@ Partial Class formControlP
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.GroupBox2.Controls.Add(Me.btnClearInventory)
         Me.GroupBox2.Controls.Add(Me.Add_Student)
         Me.GroupBox2.Controls.Add(Me.Monthly_Cap)
         Me.GroupBox2.Controls.Add(Me.Add_Supplier)
@@ -179,6 +181,28 @@ Partial Class formControlP
         Me.GroupBox2.TabIndex = 15
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Admin Panel"
+        '
+        'Add_Student
+        '
+        Me.Add_Student.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Add_Student.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.Add_Student.Location = New System.Drawing.Point(376, 87)
+        Me.Add_Student.Name = "Add_Student"
+        Me.Add_Student.Size = New System.Drawing.Size(159, 49)
+        Me.Add_Student.TabIndex = 18
+        Me.Add_Student.Text = "Add Student"
+        Me.Add_Student.UseVisualStyleBackColor = True
+        '
+        'Monthly_Cap
+        '
+        Me.Monthly_Cap.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Monthly_Cap.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.Monthly_Cap.Location = New System.Drawing.Point(717, 22)
+        Me.Monthly_Cap.Name = "Monthly_Cap"
+        Me.Monthly_Cap.Size = New System.Drawing.Size(141, 49)
+        Me.Monthly_Cap.TabIndex = 16
+        Me.Monthly_Cap.Text = "Monthly Cap"
+        Me.Monthly_Cap.UseVisualStyleBackColor = True
         '
         'Add_Supplier
         '
@@ -235,7 +259,7 @@ Partial Class formControlP
         Me.GroupBox3.Controls.Add(Me.Item_Sale)
         Me.GroupBox3.Location = New System.Drawing.Point(12, 418)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(867, 90)
+        Me.GroupBox3.Size = New System.Drawing.Size(858, 178)
         Me.GroupBox3.TabIndex = 16
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Reports"
@@ -306,27 +330,16 @@ Partial Class formControlP
         Me.Item_Sale.Text = "View Item Sale"
         Me.Item_Sale.UseVisualStyleBackColor = True
         '
-        'Monthly_Cap
+        'btnClearInventory
         '
-        Me.Monthly_Cap.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Monthly_Cap.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.Monthly_Cap.Location = New System.Drawing.Point(717, 22)
-        Me.Monthly_Cap.Name = "Monthly_Cap"
-        Me.Monthly_Cap.Size = New System.Drawing.Size(141, 49)
-        Me.Monthly_Cap.TabIndex = 16
-        Me.Monthly_Cap.Text = "Monthly Cap"
-        Me.Monthly_Cap.UseVisualStyleBackColor = True
-        '
-        'Add_Student
-        '
-        Me.Add_Student.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Add_Student.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.Add_Student.Location = New System.Drawing.Point(376, 87)
-        Me.Add_Student.Name = "Add_Student"
-        Me.Add_Student.Size = New System.Drawing.Size(159, 49)
-        Me.Add_Student.TabIndex = 18
-        Me.Add_Student.Text = "Add Student"
-        Me.Add_Student.UseVisualStyleBackColor = True
+        Me.btnClearInventory.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClearInventory.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.btnClearInventory.Location = New System.Drawing.Point(557, 87)
+        Me.btnClearInventory.Name = "btnClearInventory"
+        Me.btnClearInventory.Size = New System.Drawing.Size(182, 49)
+        Me.btnClearInventory.TabIndex = 20
+        Me.btnClearInventory.Text = "Clear Inventory"
+        Me.btnClearInventory.UseVisualStyleBackColor = True
         '
         'formControlP
         '
@@ -334,7 +347,7 @@ Partial Class formControlP
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.CausesValidation = False
-        Me.ClientSize = New System.Drawing.Size(891, 518)
+        Me.ClientSize = New System.Drawing.Size(891, 608)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox3)
@@ -370,4 +383,5 @@ Partial Class formControlP
     Friend WithEvents backupButton As System.Windows.Forms.Button
     Friend WithEvents Add_Student As System.Windows.Forms.Button
     Friend WithEvents Monthly_Cap As System.Windows.Forms.Button
+    Friend WithEvents btnClearInventory As System.Windows.Forms.Button
 End Class
