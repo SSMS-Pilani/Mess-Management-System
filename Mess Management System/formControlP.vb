@@ -1,4 +1,4 @@
-﻿Public Class formControlP
+Public Class formControlP
     Public Logged_User As String = formLogin.Logged_User
 
     'Various KeyEvents
@@ -150,4 +150,8 @@
     Private Sub Add_Student_Click(sender As Object, e As EventArgs) Handles Add_Student.Click
         formAddStudent.Show()
      End Sub
+
+    Private Sub btnClearInventory_Click(sender As Object, e As EventArgs) Handles btnClearInventory.Click
+        formClearInventory.Show()
+    End Sub
 End Class
